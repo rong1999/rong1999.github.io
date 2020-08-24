@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+	<title>好景藏存</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+	<bgsound src="music_1.mp3" loop="1">
+	<link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body style="background: #FFB5B5;">
+
+<audio id="audio" style="display:none;" src="music_1.mp3"></audio>
+<button onclick="backgroundMusic()">播放音樂</button>
+<button onclick="number()">加分選項</button>
+<script>
+	function backgroundMusic(){
+		var bgMusic = document.getElementById("audio");
+		bgMusic.volume = 0.2;
+		bgMusic.play();
+	}
+	var score=0
+	function number(){
+		score=score+1;
+		// alert(score);
+		if(score==8){
+			alert("結局1");
+			score=0;
+		}
+	}
+</script>
+<div class="row">
+	<form class="border p-4 " style="background:#FFFFFF;">
+		<div class="form-group">
+			<label>輸入玩家名稱</label>
+			<input type="text" class="form-control">
+		</div>
+		<button class="btn btn-outline-primary" style="margin-left: 30%">遊戲開始</button>
+	</form>
+</div>
+
+	<button type="button">我是按鈕</button>
+	<input type="button" value="連結名稱" onclick="location.href='https://www.wibibi.com/info.php?tid=117'">
+	<input type="button" value="第二個" onclick="location.href='new.html'">
+
+</body>
+</html>	
